@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FashionHaven | Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">FashionHaven</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+   
+  </header>
+  <!-- Hero Slideshow -->
+<section class="slideshow">
+  <div class="slides fade">
+    <img src="images/Banner4.jpg" alt="Slide 1">
+    <div class="caption">Unleash Your Style</div>
+  </div>
+
+  <div class="slides fade">
+    <img src="images/Banner3.jpg" alt="Slide 2">
+    <div class="caption">Trendy & Timeless Pieces</div>
+  </div>
+
+  <div class="slides fade">
+    <img src="images/Banner5.jpg" alt="Slide 3">
+    <div class="caption">Elevate Your Look Today</div>
+  </div>
+</section>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Welcome to FashionHaven</h1>
+    <p>Where style meet Elegance — explore the latest trends</p>
+    <a href="products.html"class="btn">Shop Now</a>
+    
+  </div>
+</section>
+
+  
+
+  <!-- Featured Products Preview -->
+  <section class="featured">
+    <h2>Featured Collections</h2>
+    <div class="featured-grid">
+      <div class="featured-item">
+        <img src="images/winter.jpg" alt="winter Fashion">
+        <h3>Timeless Cut</h3>
+        <p>Fall Collection</p>
+      </div>
+      <div class="featured-item">
+        <img src="images/men.jpg" alt="Men's Fashion">
+        <h3>Urban Class</h3>
+        <p>Men’s Edition</p>
+      </div>
+      <div class="featured-item">
+        <img src="images/casual.jpg" alt="Casual Dress">
+        <h3>Glow Chic</h3>
+        <p>Casual Vibe</p>
+      </div>
+    </div>
+  </section>
+  <section class="featured-products">
+  <h2>Featured Products</h2>
+  <div class="product-grid">
+    <div class="product-item">
+      <img src="images/Blush gown.jpg" alt="Blush Gown">
+      <h3>Blush Boom Gown</h3>
+      <p>$120</p>
+      <a href="cart.html"class=btn>Add to cart</a>
+    </div>
+    <div class="product-item">
+      <img src="images/midnight charm suit.jpg" alt="Midnight Charm Suit">
+      <h3>Midnight Charm Suit</h3>
+      <p>$250</p>
+      <a href="cart.html"class=btn>Add to cart</a>
+    </div>
+    <div class="product-item">
+      <img src="images/loafers.jpg" alt="Velvet Loafers">
+      <h3>Velvet Stroll Loafers</h3>
+      <p>$80</p>
+      <a href="cart.html"class=btn>Add to cart</a>
+    </div>
+  </div>
+  
+</section>
+<script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    const slides = document.getElementsByClassName("slides");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) slideIndex = 1;
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 4000);
+  }
+</script>
+
+
+  <!-- Footer -->
+ <footer class="site-footer">
+  <div class="footer-container">
+   
+    <!-- About / Brand -->
+    <div class="footer-about">
+      <h3>Fashion Haven</h3>
+      <p>Where style meets sophistication. Stay connected and shop your favorites.</p>
+    </div>
+
+    <!-- Useful Links -->
+    <div class="footer-links">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-social">
+      <h4>Connect with Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="images/facebook 1.jpg" alt="facebook"></a>
+       <a href="#"><img src="images/instagram 1.jpg" alt="instagram"></a>
+       <a href="#"><img src="images/twitter 1.jpg" alt="Twitter"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Fashion Haven. All rights reserved.</p>
+  </div>
+</footer>
+  
+
+</body>
+</html>      

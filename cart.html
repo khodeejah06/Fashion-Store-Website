@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart | Fashion Haven</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: white;
+        }
+.cart-page {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  align-items: center;
+}
+
+.cart-item img {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-details h3 {
+  margin: 0 0 0.5rem;
+}
+
+.item-details input {
+  width: 50px;
+  padding: 5px;
+  margin-left: 0.5rem;
+}
+
+.remove-btn {
+  background-color: black;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.cart-summary {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.cart-summary .btn {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+/* Footer Page Styling */
+
+.footer-container {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  
+}
+
+.footer-about,
+.footer-links,
+.footer-social {
+  flex: 1 1 250px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  
+}
+
+.footer-links li {
+  margin: 8px 0;
+  
+}
+
+.footer-links a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: blue;
+}
+
+.footer-social .social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  
+  
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+
+
+.footer-social img:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  margin-top: 30px;
+  font-size: medium;
+}
+
+    </style>
+  <header>
+    <h1>Fashion Haven</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html" class="active">Cart</a>
+    </nav>
+  </header>
+
+  <main class="cart-page">
+    <h2>My Shopping Cart</h2>
+    <div class="cart-container">
+      <div class="cart-item">
+        <img src="images/elegant dress.jpg" alt="Elegant Dress">
+        <div class="item-details">
+          <h3>Elegant Gown</h3>
+          <p>$700</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+      </div>
+       <div class="cart-item">
+        <img src="images/trendy sneakers.jpg" alt="Trendy Sneakers">
+        <div class="item-details">
+          <h3>Trendy Sneakers</h3>
+          <p>$120</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+         <div class="cart-item">
+        <img src="images/midnight charm suit 1.jpg" alt="Midnight Charm Suit">
+        <div class="item-details">
+          <h3>Midnight Charm Suit</h3>
+          <p>$300</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+         <div class="cart-item">
+        <img src="images/chic bags.jpg" alt="Chic Bags">
+        <div class="item-details">
+          <h3>Chic Bags</h3>
+          <p>$500</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+         <div class="cart-item">
+        <img src="images/fashion accessories.jpg" alt="Fashion Accessories">
+        <div class="item-details">
+          <h3>Fashion Accessories</h3>
+          <p>$300</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+        <div class="cart-item">
+        <img src="images/headwear.jpg" alt="Stylish Headwears">
+        <div class="item-details">
+          <h3>Stylish Headwears</h3>
+          <p>$150</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+        <div class="cart-item">
+        <img src="images/Denim.jpg" alt="Denim Syle">
+        <div class="item-details">
+          <h3>Denim Jacket</h3>
+          <p>$600</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+        <div class="cart-item">
+        <img src="images/fall.jpg" alt="Fall Elegance">
+        <div class="item-details">
+          <h3>Fall Elegance</h3>
+          <p>$450</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+        <div class="cart-item">
+        <img src="images/summer.jpg" alt="Summer Glow">
+        <div class="item-details">
+          <h3>Summer Glow</h3>
+          <p>$400</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+        <div class="cart-item">
+        <img src="images/winter 3.jpg" alt="Chic Bags">
+        <div class="item-details">
+          <h3>Winter Chic</h3>
+          <p>$300</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+        <div class="cart-item">
+        <img src="images/casual.jpg" alt="Casual">
+        <div class="item-details">
+          <h3>Casual Dress</h3>
+          <p>$650</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+        <div class="cart-item">
+        <img src="images/Abaya.jpg" alt="Abaya">
+        <div class="item-details">
+          <h3>Elegant Abaya</h3>
+          <p>$900</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+        <div class="cart-item">
+        <img src="images/evening gown.jpg" alt="Evening Gown">
+        <div class="item-details">
+          <h3>Evening Gown</h3>
+          <p>$800</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+        <div class="cart-item">
+        <img src="images/denim jacket.jpg" alt="Casual Denim Jacket ">
+        <div class="item-details">
+          <h3>Casual Denim Jacket</h3>
+          <p>$450</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+        <div class="cart-item">
+        <img src="images/leather boot.jpg" alt="Boot">
+        <div class="item-details">
+          <h3>Leather Boot</h3>
+          <p>$500</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+        <div class="cart-item">
+        <img src="images/statement necklace.jpg" alt="Necklace">
+        <div class="item-details">
+          <h3>statement necklace</h3>
+          <p>$100</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+        <div class="cart-item">
+        <img src="images/crossbody bag.jpg" alt="Crossbody bag">
+        <div class="item-details">
+          <h3>Crossbody bag</h3>
+          <p>$700</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+        <div class="cart-item">
+        <img src="images/Baseball cap.jpg" alt="Baseball">
+        <div class="item-details">
+          <h3>Baseball cap</h3>
+          <p>$50</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+        <div class="cart-item">
+        <img src="images/Autumn coat.jpg" alt="Autumn coat">
+        <div class="item-details">
+          <h3>Autumn Coat</h3>
+          <p>$300</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+        <div class="cart-item">
+        <img src="images/knit scarf.jpg" alt="Knit Scarf">
+        <div class="item-details">
+          <h3>knit scarf</h3>
+          <p>$250</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+        <div class="cart-item">
+        <img src="images/leather glove.jpg" alt="Leather Glove">
+        <div class="item-details">
+          <h3>Leather Glove</h3>
+          <p>$150</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+        <div class="cart-item">
+        <img src="images/party dress.jpg" alt="Party Dress">
+        <div class="item-details">
+          <h3>Red Party Dress</h3>
+          <p>$700</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+        <div class="cart-item">
+        <img src="images/Gold earring.jpg" alt="Gold Earring">
+        <div class="item-details">
+          <h3>Gold Earrings</h3>
+          <p>$600</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+        <div class="cart-item">
+        <img src="images/Glitter clutch.jpg" alt="Glitter Clutch">
+        <div class="item-details">
+          <h3>Glitter Clutch</h3>
+          <p>$200</p>
+          <label>Qty: <input type="number" value="1" min="1"></label>
+          <button class="remove-btn">Remove</button>
+        </div>
+        </div>
+
+      <div class="cart-summary">
+        <h3>Total: $150,000</h3>
+    <a href="checkout.html" class="btn">Proceed to Checkout</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+ <footer class="site-footer">
+  <div class="footer-container">
+   
+    <!-- About / Brand -->
+    <div class="footer-about">
+      <h3>Fashion Haven</h3>
+      <p>Where style meets sophistication. Stay connected and shop your favorites.</p>
+    </div>
+
+    <!-- Useful Links -->
+    <div class="footer-links">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-social">
+      <h4>Connect with Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="images/facebook 1.jpg" alt="facebook"></a>
+       <a href="#"><img src="images/instagram 1.jpg" alt="instagram"></a>
+       <a href="#"><img src="images/twitter 1.jpg" alt="Twitter"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Fashion Haven. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

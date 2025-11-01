@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - FashionHaven</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <section class="contact-container">
+    <h1>Contact Us</h1>
+
+    <div class="contact-content">
+      <!-- Contact Form -->
+       
+      <section class="contact-section">
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="message.html" method="post">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+      
+
+      <!-- Social Media Section -->
+      <div class="contact-socials">
+        <h2>Connect With Us</h2>
+        <p>We’d love to hear from you. Let’s connect on socials:</p>
+        <div class="social-icons">
+           <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://tiktok.com" target="_blank">Tiktok</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+  function showMessage() {
+    document.getElementById('successMessage').style.display = 'block';
+    // Optional: Clear the form after submission
+    document.getElementById('contactForm').reset();
+    return false; // Prevent actual form submission
+     alert("Your order has been placed successfully!");
+  }
+</script>
+<!-- Footer -->
+ <footer class="site-footer">
+  <div class="footer-container">
+   
+    <!-- About / Brand -->
+    <div class="footer-about">
+      <h3>Fashion Haven</h3>
+      <p>Where style meets sophistication. Stay connected and shop your favorites.</p>
+    </div>
+
+    <!-- Useful Links -->
+    <div class="footer-links">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-social">
+      <h4>Connect with Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="images/facebook 1.jpg" alt="facebook"></a>
+       <a href="#"><img src="images/instagram 1.jpg" alt="instagram"></a>
+       <a href="#"><img src="images/twitter 1.jpg" alt="Twitter"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Fashion Haven. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

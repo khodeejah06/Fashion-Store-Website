@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products | FashionHaven</title>
+  <style>
+    /* Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  margin-left: 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+nav ul li a:hover,
+nav ul li a.active {
+  color: #fff;
+}
+
+/* Section */
+.product-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+.product-section h1 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+/* Categories */
+.categories {
+  margin-bottom: 30px;
+}
+.category-btn {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background 0.3s;
+}
+.category-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+
+}
+.product-card {
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 5px;
+  background: #fff0f5;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+.product-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+#products h2 {
+  font-size: 5rem;
+  margin-bottom: 30px;
+  color: #8a2be2;
+}
+.product-grid {
+  display: grid;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.product-card h3 {
+  margin: 15px 0 5px;
+  font-size: 1.1rem;
+}
+.product-item {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  width: 200px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+.product-item img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+.product-card p {
+  color: #888;
+  margin-bottom: 10px;
+}
+.product-card button {
+  background-color: purple;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.product-card button:hover {
+  background-color: #a3003b;
+}
+.btn{
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: purple;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.btn:hover{
+  background-color: #574fd6;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+  nav ul li {
+    margin-left: 10px;
+  }
+  .product-section h1 {
+    font-size: 1.5rem;
+  }
+}
+/* Footer Page Styling */
+
+.footer-container {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  
+}
+
+.footer-about,
+.footer-links,
+.footer-social {
+  flex: 1 1 250px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  
+}
+
+.footer-links li {
+  margin: 8px 0;
+  
+}
+
+.footer-links a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: blue;
+}
+
+.footer-social .social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  
+  
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+
+
+.footer-social img:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  margin-top: 30px;
+  font-size: medium;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">FashionHaven</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="product-section">
+    <h1>Our Products</h1>
+
+    <!-- Categories -->
+    <div class="categories">
+      <button class="category-btn">Women</button>
+      <button class="category-btn">Men</button>
+      <button class="category-btn">Footwear</button>
+      <button class="category-btn">Accessories</button>
+       <button class="category-btn">Chic Bags</button>
+        <button class="category-btn">Headwear</button>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid">
+      <div class="product-card">
+      <img src="images/trendy sneakers.jpg" alt="Sneakers">
+      <h3>Trendy Sneakers</h3>
+       <p>Comfort with street style flair.</p>
+        <p>$120</p>
+        <a href="cart.html"class=btn>Add to cart</a>
+      </div>
+      <div class="product-card">
+        <img src="images/midnight charm suit 1.jpg" alt="Midnight Suit">
+        <h3>Midnight Charm Suit</h3>
+        <p>$300</p>
+        <a href="cart.html"class=btn>Add to cart</a>
+      </div>
+      <div class="product-card">
+      <img src="images/chic bags.jpg" alt="Bags">
+      <h3>Chic Bags</h3>
+       <p>Carry style everywhere you go.</p>
+       <p>$500</p>
+       <a href="cart.html"class=btn>Add to cart</a>
+      </div>
+ <div class="product-card">
+      <img src="images/fashion accessories.jpg" alt="Accessories">
+      <h3>Fashion Accessories</h3>
+      <p>Complete your look effortlessly.</p>
+      <p>$300</p>
+        <a href="cart.html"class=btn>Add to cart</a>
+      </div>
+      <div class="product-card">
+      <img src="images/headwear.jpg" alt="Headwear">
+      <h3>Stylish Headwear</h3>
+      <p>Top off your outfit with flair.</p>
+      <p>$150</p>
+      <a href="cart.html"class=btn>Add to cart</a>
+    </div>
+     <div class="product-card">
+      <img src="images/Denim.jpg" alt="Denim">
+      <h3>Denim Styles</h3>
+      <p>Timeless cuts, modern vibes.</p>
+      <p>$600</p>
+      <a href="cart.html"class=btn>Add to cart</a>
+    </div>
+    <div class="product-card">
+      <img src="images/fall.jpg" alt="Fall Collection">
+      <h3>Fall Elegance</h3>
+      <p>Warm tones & cozy layers.</p>
+      <p>$450</p>
+      <a href="cart.html"class=btn>Add to cart</a>
+    </div>
+     <div class="product-card">
+      <img src="images/summer.jpg" alt="Summer Collection">
+      <h3>Summer Glow</h3>
+      <p>Light fabrics for sunny days.</p>
+      <p>$400</p>
+      <a href="cart.html"class=btn>Add to cart</a>
+    </div>
+    <div class="product-card">
+      <img src="images/winter 3.jpg" alt="Winter Collection">
+      <h3>Winter Chic</h3>
+      <p>Stay stylish and warm.</p>
+      <p>$300</p>
+      <a href="cart.html"class=btn>Add to cart</a>
+    </div>
+    
+    <div class="product-card">
+    <img src="images/elegant dress.jpg" alt="Elegant Dress">
+      <h3>Elegant Dresses</h3>
+      <p>Perfect looks for special occasions.</p>
+      <p>$700</p>
+      <a href="cart.html"class=btn>Add to cart</a>
+    </div>
+    <div class="product-card">
+      <img src="images/casual.jpg" alt="Casual Dress">
+      <h3>Casual Dresses</h3>
+       <p>Relaxed styles for daily wear.</p>
+       <p>$650</p>
+      <a href="cart.html"class=btn>Add to cart</a>
+    </div>
+    <div class="product-card">
+     <img src="images/Abaya.jpg" alt="Elegant Abaya">
+     <h3>Elegant Abayas</h3>
+     <p>Modesty meets sophistication.</p>
+      <p>$900</p>
+      <a href="cart.html"class=btn>Add to cart</a>
+    </div>
+    <div class="product-card">
+  <img src="images/evening gown.jpg" alt="Elegant Evening Gown" />
+  <h3>Elegant Evening Gown</h3>
+  <p>Perfect for your special night</p>
+  <p>$800</p>
+  <a href="cart.html"class=btn>Add to cart</a>
+</div>
+<div class="product-card">
+  <img src="images/denim jacket.jpg" alt="Casual Denim Jacket" />
+  <h3>Casual Denim Jacket</h3>
+  <p>Comfort meets style</p>
+  <p>$450</p>
+  <a href="cart.html"class=btn>Add to cart</a>
+</div>
+<div class="product-card">
+  <img src="images/leather boot.jpg" alt="Leather Boots" />
+  <h3>Leather Boots</h3>
+  <p>Step out in confidence</p>
+  <p>$500</p>
+  <a href="cart.html"class=btn>Add to cart</a>
+</div>
+<div class="product-card">
+  <img src="images/statement necklace.jpg" alt="Statement Necklace" />
+  <h3>Statement Necklace</h3>
+  <p>Add sparkle to your look</p>
+  <p>$100</p>
+  <a href="cart.html"class=btn>Add to cart</a>
+</div>
+<div class="product-card">
+  <img src="images/crossbody bag.jpg" alt="Crossbody Bag" />
+  <h3>Crossbody Bag</h3>
+  <p>Convenient and chic</p>
+  <p>$700</p>
+  <a href="cart.html"class=btn>Add to cart</a>
+</div>
+<div class="product-card">
+  <img src="images/Baseball cap.jpg" alt="Baseball Cap" />
+  <h3>Baseball Cap</h3>
+  <p>Casual headwear</p>
+  <p>$50</p>
+  <a href="cart.html"class=btn>Add to cart</a>
+</div>
+<div class="product-card">
+  <img src="images/Autumn coat.jpg" alt="Warm Autumn Coat" />
+  <h3>Warm Autumn Coat</h3>
+  <p>Cozy and stylish for cool days</p>
+  <p>$300</p>
+  <a href="cart.html"class=btn>Add to cart</a>
+</div>
+<div class="product-card">
+  <img src="images/knit scarf.jpg" alt="Knit Scarf" />
+  <h3>Knit Scarf</h3>
+  <p>Soft warmth with autumn vibes</p>
+  <p>$250</p>
+  <a href="cart.html"class=btn>Add to cart</a>
+</div>
+<div class="product-card">
+  <img src="images/leather glove.jpg" alt="Leather Gloves" />
+  <h3>Leather Gloves</h3>
+  <p>Perfect for chilly weather</p>
+  <p>$150</p>
+  <a href="cart.html"class=btn>Add to cart</a>
+</div>
+<div class="product-card">
+  <img src="images/party dress.jpg" alt="Red Party Dress" />
+  <h3>Red Party Dress</h3>
+  <p>Turn heads this festive season</p>
+   <p>$700</p>
+  <a href="cart.html"class=btn>Add to cart</a>
+</div>
+<div class="product-card">
+  <img src="images/Gold earring.jpg" alt="Gold Earrings" />
+  <h3>Gold Earrings</h3>
+  <p>Shine bright at every celebration</p>
+  <p>$600</p>
+  <a href="cart.html"class=btn>Add to cart</a>
+</div>
+<div class="product-card">
+  <img src="images/Glitter clutch.jpg" alt="Glitter Clutch" />
+  <h3>Glitter Clutch</h3>
+  <p>Add sparkle to your outfit</p>
+  <p>$200</p>
+  <a href="cart.html"class=btn>Add to cart</a>
+</div>
+      <!-- Add more product cards as needed -->
+    </div>
+  </section>
+  <!-- Footer -->
+ <footer class="site-footer">
+  <div class="footer-container">
+   
+    <!-- About / Brand -->
+    <div class="footer-about">
+      <h3>Fashion Haven</h3>
+      <p>Where style meets sophistication. Stay connected and shop your favorites.</p>
+    </div>
+
+    <!-- Useful Links -->
+    <div class="footer-links">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-social">
+      <h4>Connect with Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="images/facebook 1.jpg" alt="facebook"></a>
+       <a href="#"><img src="images/instagram 1.jpg" alt="instagram"></a>
+       <a href="#"><img src="images/twitter 1.jpg" alt="Twitter"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Fashion Haven. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

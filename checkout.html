@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .checkout-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    #cart-summary {
+      background: #f2f2f2;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Checkout</h1>
+
+  <div class="checkout-container">
+    <div id="cart-summary">
+      <h2>Order Summary</h2>
+  </div>
+
+    <form id="checkout-form">
+      <h2>Billing Information</h2>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="text" placeholder="Address" required />
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+
+  <script>
+    const cart = [
+      { name: "Autumn Jacket", price: 8500, quantity: 1 },
+      { name: "Festive Gown", price: 12000, quantity: 2 }
+    ];
+
+    const summaryDiv = document.getElementById("cart-summary");
+
+    let total = 0;
+    cart.forEach(item => {
+      const itemTotal = item.price * item.quantity;
+      total += itemTotal;
+      summaryDiv.innerHTML += `<p><strong>item.name</strong> - ₦{item.price} x item.quantity = ₦{itemTotal}</p>`;
+    });
+
+    summaryDiv.innerHTML += `<hr><p><strong>Total:</strong> ₦${total}</p>`;
+
+    document.getElementById("checkout-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Your order has been placed successfully!");
+      window.location.href = "thankyou.html";
+    });
+  </script>
+
+</body>
+</html>
